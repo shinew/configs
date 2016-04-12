@@ -42,7 +42,7 @@ flags = [
 '-isystem',
 '/usr/local/lib',
 '-isystem',
-os.environ['GTEST_DIR'] + 'include',
+os.path.join(os.environ['GTEST_DIR'], 'include'),
 ]
 
 
