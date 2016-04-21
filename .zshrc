@@ -85,3 +85,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias a="cd $HOME/dev/experimental"
+alias d="tmux attach -t 0 || tmux"

@@ -92,6 +92,7 @@ set laststatus=2
 
 "cmd-t
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.gch,*.o
+set wildignore+=build
 
 
 "YouCompleteMe
