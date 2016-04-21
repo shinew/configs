@@ -5,19 +5,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 "Core
+Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'godlygeek/tabular'
-Plugin 'google/vim-codefmt'
+Plugin 'google/vim-codefmt'  " Depends on glaive and maktaba
 Plugin 'google/vim-glaive'
 Plugin 'google/vim-maktaba'
 Plugin 'majutsushi/tagbar'
+Plugin 'powerline/powerline'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wincent/command-t'
 
 "Pandoc
@@ -35,11 +33,15 @@ Plugin 'wincent/command-t'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'enomsg/vim-haskellConcealPlus'
 "Plugin 'felikz/ctrlp-py-matcher'
+"Plugin 'godlygeek/tabular'
 "Plugin 'kana/vim-operator-user'
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'rhysd/vim-clang-format'
 "Plugin 'rosenfeld/conque-term'
+"Plugin 'scrooloose/nerdtree'
 "Plugin 'scrooloose/syntastic'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-session'
 
@@ -81,9 +83,11 @@ set pastetoggle=<F2>
 set whichwrap+=<,>,h,l,[,]
 
 
-"Airline install
+"Powerline install
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 set laststatus=2
-let g:airline_powerline_fonts = 1
 
 
 "cmd-t
