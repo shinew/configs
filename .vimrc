@@ -92,7 +92,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.gch,*.o
 
 "YouCompleteMe
 autocmd CompleteDone * pclose
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/dev/config/.ycm_extra_conf.py'
 nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 
