@@ -5,7 +5,8 @@ export ZSH=/Users/shine/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,4 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias a="cd $HOME/dev/experimental"
-alias d="tmux attach -t 0 || tmux"
+alias update_all="python $HOME/dev/update-script/updates.py"
+#alias d="tmux attach -t 0 || tmux"
+alias d="ssh shine@192.168.206.149 -t tmux attach"
+alias dev="ssh shine@192.168.206.149 -t tmux"
