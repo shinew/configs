@@ -14,6 +14,7 @@ Plugin 'google/vim-glaive'
 Plugin 'google/vim-maktaba'
 Plugin 'majutsushi/tagbar'
 Plugin 'powerline/powerline'
+Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wincent/command-t'
@@ -73,10 +74,10 @@ syntax on
 
 "Keymappings
 map <F4> :!ctags .<CR>
-nmap ,d :NERDTreeToggle<CR>
+"nmap ,d :NERDTreeToggle<CR>
 nmap ,t :TagbarToggle<CR>
 nmap <Leader>t :CommandT .<CR>
-nmap bt :ConqueTerm bash<CR><CR>
+"nmap bt :ConqueTerm bash<CR><CR>
 nmap tn :tabnew<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
 set pastetoggle=<F2>
