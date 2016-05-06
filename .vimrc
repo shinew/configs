@@ -9,6 +9,7 @@ Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'google/vim-codefmt'  " Depends on glaive and maktaba
 Plugin 'google/vim-glaive'
 Plugin 'google/vim-maktaba'
@@ -16,6 +17,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'powerline/powerline'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wincent/command-t'
 
@@ -39,7 +41,6 @@ Plugin 'wincent/command-t'
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'rhysd/vim-clang-format'
 "Plugin 'rosenfeld/conque-term'
-"Plugin 'scrooloose/nerdtree'
 "Plugin 'scrooloose/syntastic'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
@@ -74,7 +75,7 @@ syntax on
 
 "Keymappings
 map <F4> :!ctags .<CR>
-"nmap ,d :NERDTreeToggle<CR>
+nmap ,d :NERDTreeToggle<CR>
 nmap ,t :TagbarToggle<CR>
 nmap <Leader>t :CommandT .<CR>
 "nmap bt :ConqueTerm bash<CR><CR>
