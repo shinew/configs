@@ -19,6 +19,7 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/restore_view.vim'
 Plugin 'wincent/command-t'
 
 "Pandoc
@@ -48,7 +49,7 @@ Plugin 'wincent/command-t'
 "Plugin 'xolox/vim-session'
 
 call vundle#end()
-call glaive#Install()
+"call glaive#Install()
 filetype plugin indent on
 
 
@@ -65,6 +66,7 @@ set number
 set showmatch
 set smartcase
 set tabstop=2 shiftwidth=2 softtabstop=2
+set foldmethod=syntax
 
 
 "Syntax highlighting
@@ -105,6 +107,11 @@ nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 "Haskell
 let $PATH = $PATH . ':' . expand('~/.cabal/bin')
+
+
+"OCaml
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 
 ""NeoComplete
