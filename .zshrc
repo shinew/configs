@@ -50,13 +50,16 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#plugins=(git, vi-mode)
 plugins=(git)
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export GTEST_DIR="/usr/local/include/googletest"
+# export PATH="$PATH:$HOME/dev/lib/cling/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -77,6 +80,9 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# OPAM configuration
+. /Users/shine/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -85,8 +91,39 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias a="cd $HOME/dev/experimental"
+
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+
+
+#alias a="cd $HOME/dev/experimental"
+alias a="cd $HOME/dev/chatroom"
 alias update_all="python $HOME/dev/update-script/updates.py"
+alias d="mosh shine@159.203.218.183 tmux attach"
+alias dev="mosh shine@159.203.218.183"
 #alias d="tmux attach -t 0 || tmux"
-alias d="ssh shine@192.168.206.149 -t tmux attach"
-alias dev="ssh shine@192.168.206.149 -t tmux"
+#alias d="ssh shine@192.168.206.149 -t tmux attach"
+#alias dev="ssh shine@192.168.206.149 -t tmux"
+#alias server="ssh -i shine.pem shine@ec2-52-201-144-159.compute-1.amazonaws.com"
+#alias ssh_uw="ssh -X sx5wang@linux.student.cs.uwaterloo.ca"
+#function notebook {
+  #jupyter notebook $HOME/Dropbox/School/University/2016/spring/$1
+#}
+#function study {
+  #cd $HOME/Dropbox/School/University/2016/spring/$1
+#}
+#alias recompile="jupyter nbconvert --to pdf *.ipynb"
+function update_resume {
+  cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/Dropbox/Work/Resume/Shine\ Wang\ -\ Resume.pdf
+  cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/dev/shinew.github.io/resume.pdf
+  cd $HOME/dev/shinew.github.io
+  git add .
+  git commit -m 'updated resume'
+  git push
+}
+
+#bindkey "^R" history-incremental-search-backward
+HISTSIZE=130000 SAVEHIST=130000
+setopt PRINT_EXIT_VALUE
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

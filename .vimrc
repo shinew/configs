@@ -1,57 +1,53 @@
-"Vundle setup
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 "Core
-Plugin 'MattesGroeger/vim-bookmarks'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'google/vim-codefmt'  " Depends on glaive and maktaba
-Plugin 'google/vim-glaive'
-Plugin 'google/vim-maktaba'
-Plugin 'majutsushi/tagbar'
-Plugin 'powerline/powerline'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/restore_view.vim'
-Plugin 'wincent/command-t'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'altercation/vim-colors-solarized'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'google/vim-codefmt'  " Depends on glaive and maktaba
+Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'majutsushi/tagbar'
+Plug 'powerline/powerline'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/restore_view.vim'
 
 "Pandoc
-"Plugin 'vim-pandoc/vim-pandoc'
-"Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
 
 "Haskell
-"Plugin 'Shougo/vimproc.vim'
-"Plugin 'Twinside/vim-haskellConceal'
-"Plugin 'eagletmt/ghcmod-vim'
-"Plugin 'eagletmt/neco-ghc'
+"Plug 'Shougo/vimproc.vim'
+"Plug 'Twinside/vim-haskellConceal'
+"Plug 'eagletmt/ghcmod-vim'
+"Plug 'eagletmt/neco-ghc'
 
 "Disabled
-"Plugin 'Shougo/neocomplete.vim'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'enomsg/vim-haskellConcealPlus'
-"Plugin 'felikz/ctrlp-py-matcher'
-"Plugin 'godlygeek/tabular'
-"Plugin 'kana/vim-operator-user'
-"Plugin 'kien/ctrlp.vim'
-"Plugin 'rhysd/vim-clang-format'
-"Plugin 'rosenfeld/conque-term'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'xolox/vim-misc'
-"Plugin 'xolox/vim-session'
+"Plug 'Shougo/neocomplete.vim'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'enomsg/vim-haskellConcealPlus'
+"Plug 'felikz/ctrlp-py-matcher'
+"Plug 'godlygeek/tabular'
+"Plug 'kana/vim-operator-user'
+"Plug 'kien/ctrlp.vim'
+"Plug 'rhysd/vim-clang-format'
+"Plug 'rosenfeld/conque-term'
+"Plug 'scrooloose/syntastic'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'wincent/command-t'
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-session'
 
-call vundle#end()
+" Add plugins to &runtimepath
+call plug#end()
 "call glaive#Install()
 filetype plugin indent on
-
 
 "General
 set autoindent
@@ -79,7 +75,8 @@ syntax on
 map <F4> :!ctags .<CR>
 nmap ,d :NERDTreeToggle<CR>
 nmap ,t :TagbarToggle<CR>
-nmap <Leader>t :CommandT .<CR>
+nmap <Leader>t :FZF <CR>
+"nmap <Leader>t :CommandT .<CR>
 "nmap bt :ConqueTerm bash<CR><CR>
 nmap tn :tabnew<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
@@ -95,8 +92,8 @@ set laststatus=2
 
 
 "cmd-t
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.gch,*.o
-set wildignore+=build
+"set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.gch,*.o
+"set wildignore+=build
 
 
 "YouCompleteMe
@@ -113,6 +110,7 @@ let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
+"fzf
 
 ""NeoComplete
 "" Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
