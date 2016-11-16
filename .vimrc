@@ -75,13 +75,13 @@ syntax on
 map <F4> :!ctags .<CR>
 nmap ,d :NERDTreeToggle<CR>
 nmap ,t :TagbarToggle<CR>
-nmap <Leader>t :FZF <CR>
-"nmap <Leader>t :CommandT .<CR>
-"nmap bt :ConqueTerm bash<CR><CR>
 nmap tn :tabnew<CR>
 nnoremap <CR> :nohlsearch<CR><CR>
 set pastetoggle=<F2>
 set whichwrap+=<,>,h,l,[,]
+
+"nmap <Leader>t :CommandT .<CR>
+"nmap bt :ConqueTerm bash<CR><CR>
 
 
 "Powerline install
@@ -103,14 +103,16 @@ nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 
 "Haskell
-let $PATH = $PATH . ':' . expand('~/.cabal/bin')
+"let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 
 "OCaml
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
+set rtp^="/Users/shine/.opam/4.03.0/share/ocp-indent/vim"
 
 "fzf
+nmap <Leader>f :FZF <CR>
 
 ""NeoComplete
 "" Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
