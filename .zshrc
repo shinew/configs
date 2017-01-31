@@ -56,7 +56,13 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin"
+MY_HADOOP_PATHS="$HOME/dev/lib/hadoop-2.7.2/bin:$HOME/dev/lib/spark-2.0.2-bin-hadoop2.7/bin"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export SCALA_HOME="$HOME/dev/lib/scala-2.11.8"
+export SPARK_LOCAL_IP="127.0.0.1"
+export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$SCALA_HOME/bin:$MY_HADOOP_PATHS:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Library/TeX/texbin:$HOME/.cargo/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # export PATH="$PATH:$HOME/dev/lib/cling/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -81,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 # OPAM configuration
 . /Users/shine/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+eval `opam config env`
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -95,9 +102,22 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
-
-alias a="cd $HOME/dev/experimental"
+alias a="cd $HOME/Dropbox/School/University/2017/winter"
+alias d="cd $HOME/dev"
+alias lit="cd $HOME/dev/literallyjavac"
+alias big="cd $HOME/dev/bigdata2017w"
+alias b="make build"
+alias t="cargo test"
 alias update_all="python $HOME/dev/update-script/updates.py"
+alias fetch_upstream="git checkout master && git pull && git checkout - && git remote prune origin"
+function update_resume {
+  cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/Dropbox/Work/Resume/Shine\ Wang\ -\ Resume.pdf
+  cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/dev/shinew.github.io/resume.pdf
+  cd $HOME/dev/shinew.github.io
+  git add .
+  git commit -m 'updated resume'
+  git push
+}
 #alias recompile="jupyter nbconvert --to pdf *.ipynb"
 
 #bindkey "^R" history-incremental-search-backward
