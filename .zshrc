@@ -108,8 +108,10 @@ alias lit="cd $HOME/dev/literallyjavac"
 alias big="cd $HOME/dev/bigdata2017w"
 alias b="make build"
 alias t="cargo test"
+
 alias update_all="python $HOME/dev/update-script/updates.py"
 alias fetch_upstream="git checkout master && git pull && git checkout - && git remote prune origin"
+
 function update_resume {
   cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/Dropbox/Work/Resume/Shine\ Wang\ -\ Resume.pdf
   cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/dev/shinew.github.io/resume.pdf
@@ -118,9 +120,8 @@ function update_resume {
   git commit -m 'updated resume'
   git push
 }
-#alias recompile="jupyter nbconvert --to pdf *.ipynb"
 
-#bindkey "^R" history-incremental-search-backward
 HISTSIZE=130000 SAVEHIST=130000
 setopt PRINT_EXIT_VALUE
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
