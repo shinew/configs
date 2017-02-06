@@ -14,7 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/restore_view.vim'
 
 "Language
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --racer-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --racer-completer --tern-completer' }
 Plug 'rust-lang/rust.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
