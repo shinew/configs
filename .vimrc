@@ -68,7 +68,7 @@ let g:ycm_rust_src_path = '/Users/shine/.multirust/toolchains/stable-x86_64-appl
 nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 "Rust
-let g:rustfmt_autosave = 1
+"let g:rustfmt_autosave = 1
 
 "OCaml
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
