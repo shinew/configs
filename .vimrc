@@ -25,13 +25,13 @@ filetype plugin indent on
 "General
 set autoindent
 set backspace=indent,eol,start
-set colorcolumn=80
+"set colorcolumn=80
 set cursorline
 set expandtab smarttab shiftround nojoinspaces
 set hlsearch
 set ignorecase
 set incsearch
-set number
+"set number
 set showmatch
 set smartcase
 set tabstop=2 shiftwidth=2 softtabstop=2
@@ -46,6 +46,7 @@ set background=dark
 syntax on
 
 "Keymappings
+imap fd <Esc>
 map <F4> :!ctags .<CR>
 nmap ,d :NERDTreeToggle<CR>
 nmap ,t :TagbarToggle<CR>
