@@ -18,6 +18,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --racer-c
 Plug 'rust-lang/rust.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 filetype plugin indent on

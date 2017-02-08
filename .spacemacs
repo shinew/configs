@@ -298,7 +298,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
- ;;(setq-default dotspacemacs-themes '(sanityinc-solarized-dark))
+  (setq-default dotspacemacs-themes '(sanityinc-solarized-dark))
   (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
   (setq exec-path (append exec-path '("/usr/local/bin")))
   (setq exec-path-from-shell-check-startup-files nil)
