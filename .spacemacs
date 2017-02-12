@@ -31,15 +31,17 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     sml
-     python
-     rust
-     ocaml
-     react
+     ;; sml
+     ;; react
      latex
      (c-c++ :variables
         c-c++-enable-clang-support t
         c-c++-default-mode-for-headers 'c++-mode)
+     python
+     rust
+     ocaml
+     markdown
+     org
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -50,11 +52,9 @@ values."
      better-defaults
      emacs-lisp
      git
-     markdown
-     org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+     ;; (shell :variables
+     ;;        shell-default-height 30
+     ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
      version-control
