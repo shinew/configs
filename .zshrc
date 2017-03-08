@@ -9,11 +9,11 @@ alias em="emacsclient"
 
 alias update_all="python $HOME/dev/update-script/updates.py"
 alias d="cd $HOME/dev"
-alias fetch_upstream="git checkout master && git pull && git checkout - && git remote prune origin"
-alias b="make build"
+alias fetch_upstream="git checkout master && git pull --rebase && git checkout - && git remote prune origin"
+alias b="cargo build"
 
 # Project specific
-alias t="cargo test"
+alias t="cargo build && cargo test -- --nocapture"
 alias a="cd $HOME/Dropbox/School/University/2017/winter"
 alias lit="cd $HOME/dev/literallyjavac"
 alias big="cd $HOME/dev/bigdata2017w"

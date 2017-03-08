@@ -89,7 +89,7 @@ export SCALA_HOME="$HOME/dev/lib/scala-2.11.8"
 export SPARK_LOCAL_IP="127.0.0.1"
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
-export PATH="$SCALA_HOME/bin:$MY_HADOOP_PATHS:$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$SCALA_HOME/bin:$MY_HADOOP_PATHS:$HOME/.cargo/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # OPAM configuration
 . /Users/shine/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
