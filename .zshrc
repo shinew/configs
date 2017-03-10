@@ -16,6 +16,7 @@ alias b="cargo build"
 alias t="cargo build && cargo test -- --nocapture"
 alias a="cd $HOME/Dropbox/School/University/2017/winter"
 alias lit="cd $HOME/dev/literallyjavac"
+alias liti="cd $HOME/dev/literallyjavac/src/tests/integration"
 alias big="cd $HOME/dev/bigdata2017w"
 
 function update_resume {
