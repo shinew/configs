@@ -144,7 +144,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro for Powerline"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -324,6 +324,11 @@ you should place your code here."
                              (setq flycheck-cppcheck-language-standard "c++11")
                              (setq flycheck-clang-language-standard "c++11")
                              ))
+  ;;; Prolog mode
+  (autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
+  (autoload 'prolog-mode "prolog" "Major mode for editing prolog programs." t)
+  (setq prolog-system 'swi) ; prolog-system below for possible values
+  (add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
