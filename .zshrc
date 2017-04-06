@@ -8,15 +8,11 @@ alias egrep="egrep --color=auto"
 alias em="emacsclient"
 
 alias update_all="python $HOME/dev/update-script/updates.py"
-alias d="cd $HOME/dev"
 alias fetch_upstream="git checkout master && git pull --rebase && git checkout - && git remote prune origin"
-alias b="cargo build"
 
 # Project specific
-alias t="cargo build && cargo test -- --nocapture"
 alias a="cd $HOME/Dropbox/School/University/2017/winter"
-alias lit="cd $HOME/dev/literallyjavac"
-alias liti="cd $HOME/dev/literallyjavac/src/tests/integration"
+alias d="cd $HOME/dev"
 
 function update_resume {
   cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/Dropbox/Work/Resume/Shine\ Wang\ -\ Resume.pdf
