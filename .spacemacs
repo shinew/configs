@@ -44,6 +44,7 @@ values."
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
+     latex
      git
      org
      helm
