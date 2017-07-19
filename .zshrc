@@ -19,7 +19,18 @@ function update_resume {
   cp $HOME/Dropbox/Work/Resume/LaTeX/resume.pdf $HOME/dev/shinew.github.io/resume.pdf
   cd $HOME/dev/shinew.github.io
   git add .
-  git commit -m 'updated resume'
+  git commit -m "updated resume"
+  git push
+}
+
+function cip {
+  git add .
+  git --no-pager diff --patience
+  read "REPLY?commit message(default 'z'): "
+  if [ "$REPLY" = "" ]; then
+    REPLY="z"
+  fi
+  git commit -m $REPLY
   git push
 }
 
