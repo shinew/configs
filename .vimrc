@@ -48,12 +48,13 @@ set background=dark
 syntax on
 
 "Keymappings
-imap fd <Esc>
-map <F4> :!ctags .<CR>
-nmap ,d :NERDTreeToggle<CR>
-nmap ,t :TagbarToggle<CR>
-nmap tn :tabnew<CR>
+let mapleader=","
 nnoremap <CR> :nohlsearch<CR><CR>
+imap fd <Esc>
+"map <F4> :!ctags .<CR>
+"nmap <Leader>f :NERDTreeToggle<CR>
+"nmap <Leader>t :TagbarToggle<CR>
+nmap tn :tabnew<CR>
 set pastetoggle=<F2>
 set whichwrap+=<,>,h,l,[,]
 
@@ -67,7 +68,7 @@ set laststatus=2
 autocmd CompleteDone * pclose
 let g:ycm_global_ycm_extra_conf = '/Users/shine/dev/configs/.ycm_extra_conf.py'
 let g:ycm_rust_src_path = '/Users/shine/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
-nnoremap <leader>d :YcmCompleter GoTo<CR>
+nnoremap <leader>t :YcmCompleter GoTo<CR>
 
 "Rust
 "let g:rustfmt_autosave = 1
@@ -75,7 +76,7 @@ nnoremap <leader>d :YcmCompleter GoTo<CR>
 "OCaml
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
-set rtp^="/Users/shine/.opam/4.03.0/share/ocp-indent/vim"
+execute "set rtp+=" . g:opamshare . "/ocp-indent/vim"
 
 "fzf
 nmap <Leader>f :FZF <CR>
