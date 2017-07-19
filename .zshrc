@@ -25,7 +25,7 @@ function update_resume {
 
 function cip {
   git add .
-  git --no-pager diff --patience
+  git --no-pager diff --patience HEAD
   read "REPLY?commit message(default 'z'): "
   if [ "$REPLY" = "" ]; then
     REPLY="z"
