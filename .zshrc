@@ -11,7 +11,7 @@ alias update_all="python $HOME/dev/update-script/updates.py"
 alias fetch_upstream="git checkout master && git pull --rebase && git checkout - && git remote prune origin"
 
 # Project specific
-alias a="cd $HOME/Dropbox/School/University/2017/winter"
+alias a="cd $HOME/Dropbox/School/University/2017/fall"
 alias d="cd $HOME/dev"
 
 function update_resume {

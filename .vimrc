@@ -20,6 +20,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'flxf/uCpp.vim'
 
 call plug#end()
 filetype plugin indent on

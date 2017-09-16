@@ -83,13 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-MY_HADOOP_PATHS="$HOME/dev/lib/hadoop-2.7.2/bin:$HOME/dev/lib/spark-2.0.2-bin-hadoop2.7/bin"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export SCALA_HOME="$HOME/dev/lib/scala-2.11.8"
-export SPARK_LOCAL_IP="127.0.0.1"
-export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+#MY_HADOOP_PATHS="$HOME/dev/lib/hadoop-2.7.2/bin:$HOME/dev/lib/spark-2.0.2-bin-hadoop2.7/bin"
+#export JAVA_HOME=$(/usr/libexec/java_home)
+#export SCALA_HOME="$HOME/dev/lib/scala-2.11.8"
+#export SPARK_LOCAL_IP="127.0.0.1"
+#export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
-export PATH="$SCALA_HOME/bin:$MY_HADOOP_PATHS:$HOME/.cargo/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.cargo/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # OPAM configuration
 . /Users/shine/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
