@@ -52,10 +52,11 @@ syntax on
 let mapleader=","
 nnoremap <CR> :nohlsearch<CR><CR>
 imap fd <Esc>
+nmap <Space>fs :w<CR>
+nmap tn :tabnew<CR>
 "map <F4> :!ctags .<CR>
 "nmap <Leader>f :NERDTreeToggle<CR>
 "nmap <Leader>t :TagbarToggle<CR>
-nmap tn :tabnew<CR>
 set pastetoggle=<F2>
 set whichwrap+=<,>,h,l,[,]
 
