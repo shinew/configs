@@ -32,7 +32,7 @@ flags = [
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include',
+'/Library/Developer/CommandLineTools/usr/bin/../lib/clang/9.0.0/include',
 '-isystem',
 '/Library/Developer/CommandLineTools/usr/include',
 '-isystem',
