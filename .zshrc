@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/curl/bin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -7,7 +7,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias em="emacsclient"
 
-alias update_all="python $HOME/dev/update-script/updates.py"
+alias update_all="python2 $HOME/dev/update-script/updates.py"
 alias fetch_upstream="git checkout master && git pull --rebase && git checkout - && git remote prune origin"
 
 # Project specific
